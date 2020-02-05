@@ -1,0 +1,12 @@
+[alias]
+	ci = commit
+	co = checkout
+	su = submodule update --init --recursive
+	st = status
+[push]
+	recurseSubmodule=check
+[url "git@github.com:"]
+	pushInsteadOf = https://github.com/
+[user]
+	email = utakoueda@gmail.com
+	name = Utako Ueda
