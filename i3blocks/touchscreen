@@ -1,17 +1,17 @@
 #!/bin/bash
 
 enabled() {
-  xinput list-props "ELAN Touchscreen" | grep "Device Enabled" | cut -d':' -f2 | grep 1 > /dev/null
+  xinput list-props "ELAN25B4:00 04F3:25B4" | grep "Device Enabled" | cut -d':' -f2 | grep 1 > /dev/null
 }
 
-echo -n "<span color='#eec3c3'>  </span>"
+echo -n "<span color='#eec3c3'> </span>"
 
 # Left click
 if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
   if enabled; then
-    xinput disable "ELAN Touchscreen"
+    xinput disable "ELAN25B4:00 04F3:25B4"
   else
-    xinput enable "ELAN Touchscreen"
+    xinput enable "ELAN25B4:00 04F3:25B4"
   fi
 fi
 
